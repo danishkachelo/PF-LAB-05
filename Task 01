@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int age;
+    float fitnessScore, discount = 0;
+
+    printf("Enter Age: ");
+    scanf("%d", &age);
+
+    printf("Enter Fitness Score: ");
+    scanf("%f", &fitnessScore);
+
+    if (fitnessScore >= 85) {
+        if (age < 25)
+            discount = 40;
+        else
+            discount = 25;
+    } else {
+        if (fitnessScore >= 70 && age < 30)
+            discount = 15;
+        else
+            discount = 0;
+    }
+
+    printf("Discount = %.0f%%\n", discount);
+
+    return 0;
+}
